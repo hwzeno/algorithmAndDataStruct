@@ -11,14 +11,38 @@ int print_arr(int arr[], int n);
 
 int main(int argc, char* argv)
 {
-	int array[N] = {0};//初始化
-	int i;
-	for(i = 0; i < N; i++)//循环赋值
+//	int array[N] = {0};//初始化
+//	int i;
+//	for(i = 0; i < N; i++)//循环赋值
+//	{
+//		scanf("%d", &array[i]);//注意不要少了&	
+//	}
+//	print_arr(array, N);//打印初始数组
+//	
+//	bouble_sort(array, N);//排序
+	
+	
+	
+	int ret;
+	FILE *fd;
+	fd = fopen("randomNum", "r");
+	while(ret = scanf("%d", fd))
 	{
-		scanf("%d", &array[i]);//注意不要少了&	
+		printf("%d", ret);
 	}
-	print_arr(array, N);//打印初始数组
-	bouble_sort(array, N);//排序
+
+
+
+
+
+
+
+
+
+
+
+	
+	
 	return 0;
 }
 
@@ -29,7 +53,7 @@ int bouble_sort(int arr[], int n)//冒泡算法
 	int i, j;
 for(i = 0; i < n - 1; i++)
 	{
-		int flag = 0;//设置标志
+		int	flag = 0;//设置标志
 		for(j = i + 1; j < n; j++)//注意每次进入内层for循环时都会对j进行一次初始化，不要写成j=1;
 		{
 			if (arr[i] > arr[j])
